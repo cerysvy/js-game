@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap');
+$recipe-font: 'Cormorant Unicase';
+
+$button-color: green;
+%flex-center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vh;
+  border: 2px solid black;
+  margin: 10vh;
+}
+
+main {
+  @extend %flex-center;
+  font-family: $recipe-font;
+  margin: 10vh;
+  height: 70vh;
+  width: 50vh; 
+
+  section {
+    @extend %flex-center;
+    flex-direction: column;
+    height: 60vh;
+    width: 40vh;  
+    border: 2px solid black;
+    background-color: #1b1b1b;
+    color: #eeeeee;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 30px;
+      font-style: italic;
+      margin: 10px;
+    }
+
+    ul {
+      @extend %flex-center;
+      flex-direction: column;
+      height: 20vh;
+      font-size: 28px;
+      list-style: none;
+
+      .espresso-martini__img {
+        height: 200px;
+      }
+    }
+
+    p {
+      @extend %flex-center;
+      flex-direction: column;
+      font-size: 28px;
+      font-weight: 500;
+      margin: 10px;
+    }
+  
+    button {
+      margin: 20px;
+      background-color: $button-color;
+      padding: 10px 30px;
+      border-radius: 5px;
+      color: white;
+      border: 2px solid black;
+    }
+  }
+}
+
+.bar {
+  @extend %flex-center;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: $recipe-font;
+  margin: 10vh;
+  height: 100vh;
+  width: 100vh; 
+  border: 2px solid black;
+
+  .top-shelf {
+    margin: 10px 10px 0 10px;
+    height: 20vh;
+    width: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #espresso {
+      @extend %flex-center;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+    }
+
+    #lemon-juice {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+      .lemon-juice__img {
+        height: 100px;
+      }
+    }
+
+    #simple-syrup {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+      .simple-syrup__img {
+        height: 100px;
+      }
+    }
+
+    #creme-de-mure {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+      .creme-de-mure__img {
+        height: 100px;
+      }
+    }
+  }
+
+  .bottom-shelf {
+    margin: 10px 0 10px 0;
+    height: 20vh;
+    width: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    #vodka {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+
+      .vodka__img {
+        height: 100px;
+      }
+    }
+
+    #gin {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+
+      .gin__img {
+        height: 100px;
+      }
+    }
+
+    #cof-liq {
+      @extend %flex-center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+
+      .cof-liq__img {
+        height: 100px;
+      }
+    }
+  }
+
+  .bar-top {
+    margin: 10px 0 10px 0;
+    height: 20vh;
+    width: 90vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    #ice {
+      @extend %flex-center;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+    }
+    
+    #shake {
+      @extend %flex-center;
+      margin: 10px 10px 0 10px;
+      height: 150px;
+      width: 150px;
+      border: 2px solid black;
+    }
+  }
+}
