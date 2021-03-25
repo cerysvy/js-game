@@ -1,3 +1,12 @@
+const readyButton = document.getElementById("ready-button");
+const recipe = document.getElementById("recipe");
+const bar = document.getElementById("bar");
+
+readyButton.addEventListener("click", () => {
+    recipe.classList.add("hide");
+    bar.classList.remove("hide");
+  });
+
 const espresso = document.getElementById("espresso");
 const lemonJuice = document.getElementById("lemon-juice");
 const simpleSyrup = document.getElementById("simple-syrup");
@@ -9,6 +18,8 @@ const coffeeLiqueur = document.getElementById("cof-liq");
 
 const ice = document.getElementById("ice");
 const shake = document.getElementById("shake");
+
+
 
 espresso.addEventListener("click", () => {
   answersArray.push(espresso.innerHTML.toLowerCase());

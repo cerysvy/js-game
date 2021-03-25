@@ -9,55 +9,58 @@
 </head>
 
 <body>
-  <header>
+  <header id="recipe">
   <main>
     <section>
-      <h2>Recipe</h2> 
-      <h3>Espresso Martini</h3>
       <ul>
+        <h3>Espresso Martini</h3>
         <li><img src="espresso-martini.png" class="espresso-martini__img"></li>
         <li>25ml Espresso</li>
         <li>50ml Vodka</li>
         <li>25ml Coffee Liqueur</li>
+        <br>
+        <li>Add some ice</li>
+        <li>Shake!</li>
+        <button id=ready-button>Ready?</button>
       </ul>
-      <p>Add some ice</p>
-      <p>Shake!</p>
-      
-      <button id=ready-button>Ready?</button>
     </section>
+
+
   </main>
   </header>
 
 
-
-<div class="bar">
+<div class="bar hide" id="bar">
   <div class="top-shelf">
-    <span id ="espresso">Espresso</span>
-    <span id ="lemon-juice">
+    <span id ="espresso-box">
+      <img src="espresso.jpg" class="espresso__img">
+      <p id ="espresso">Espresso</p>
+    </span>
+    <span id ="lemon-juice-box">
       <img src="lemon-juice.jpg" class="lemon-juice__img">
-      Lemon Juice
+      <p id ="lemon-juice">Lemon Juice</p>
     </span>
-    <span id ="simple-syrup">
+    <span id ="simple-syrup-box">
       <img src="simple-syrup.png" class="simple-syrup__img">
-      Simple Syrup
+      <p id ="simple-syrup">Simple Syrup</p>
     </span>
-    <span id ="creme-de-mure">
+    <span id ="creme-de-mure-box">
       <img src="creme-de-mure.jpg" class="creme-de-mure__img">
-      Creme De Mure
+      <p id ="creme-de-mure">Creme De Mure</p>
     </span>
   </div>
   <div class="bottom-shelf">
-    <span id ="vodka">
+    <span id ="vodka-box">
       <img src="vodka.png" class="vodka__img">
-      Vodka
+      <p id ="vodka">vodka</p>
     </span>
-    <span id ="gin">
+    <span id ="gin-box">
       <img src="gin.jpg" class="gin__img">
-      Gin
+      <p id ="gin">Gin</p>
     </span>
-    <span id ="cof-liq">
+    <span id ="cof-liq-box">
       <img src="coffee-liqueur.jpg" class="cof-liq__img">
-      Coffee Liqueur
+      <p id ="cof-liq">Coffee Liqueur</p>
     </span>
   </div>
   <div class="bar-top">
@@ -68,6 +71,19 @@
 
 </body>
 
-  <script src="main.js"></script>
+<div class="result" id="result">
+  <section id="outcome">
+    <ul id="win">
+      <h3>Perfect!</h3>
+      <li>Drink order fulfilled!</li>
+      <li><img src="espresso-martini.png" class="espresso-martini__img"></li>
+      <button id=restart-button>Play again?</button>
+    </ul>
+  </section>
 
+
+
+</div>
+
+  <script src="main.js"></script>
 </html>

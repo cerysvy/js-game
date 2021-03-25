@@ -1,5 +1,12 @@
 "use strict";
 
+var readyButton = document.getElementById("ready-button");
+var recipe = document.getElementById("recipe");
+var bar = document.getElementById("bar");
+readyButton.addEventListener("click", function () {
+  recipe.classList.add("hide");
+  bar.classList.remove("hide");
+});
 var espresso = document.getElementById("espresso");
 var lemonJuice = document.getElementById("lemon-juice");
 var simpleSyrup = document.getElementById("simple-syrup");

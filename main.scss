@@ -18,36 +18,26 @@ $button-color: green;
 header {
   @extend %flex-center;
   flex-direction: column;
-  height: 100vh;
+  height: 95vh;
   width: 100vh;
   border: 2px solid black;
-  margin: 10vh;
 }
 
 main {
   @extend %flex-center;
   font-family: $recipe-font;
-  margin: 10vh;
-  height: 70vh;
-  width: 50vh; 
 
   section {
     @extend %flex-center;
     flex-direction: column;
     height: 60vh;
     width: 40vh;  
-    border: 2px solid black;
+    border: 10px solid white;
     background-color: #1b1b1b;
     color: #eeeeee;
 
-    h2 {
-      font-size: 32px;
-    }
-
     h3 {
-      font-size: 30px;
-      font-style: italic;
-      margin: 10px;
+      height: 50px;
     }
 
     ul {
@@ -62,13 +52,6 @@ main {
       }
     }
 
-    p {
-      @extend %flex-center;
-      flex-direction: column;
-      font-size: 28px;
-      font-weight: 500;
-      margin: 10px;
-    }
   
     button {
       margin: 20px;
@@ -86,30 +69,41 @@ main {
   flex-direction: column;
   justify-content: space-around;
   font-family: $recipe-font;
-  margin: 10vh;
-  height: 100vh;
+  height: 95vh;
   width: 100vh; 
   border: 2px solid black;
 
   .top-shelf {
-    margin: 10px 10px 0 10px;
+    padding: 40px 10px 0 10px;
+    background-color: #1b1b1b;
     height: 20vh;
     width: 90vh;
     border: 2px solid black;
+    border-bottom: 20px solid saddlebrown;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    #espresso {
+    #espresso-box {
       @extend %flex-center;
+      background-color: white;
+      flex-direction: column;
+      justify-content: space-evenly;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
       border: 2px solid black;
+      .espresso__img {
+        pointer-events: none;
+        margin-left: 10px;
+        margin-top: 45px;;
+        height: 50px;
+      }
     }
 
-    #lemon-juice {
+    #lemon-juice-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
@@ -117,12 +111,14 @@ main {
       width: 150px;
       border: 2px solid black;
       .lemon-juice__img {
+        pointer-events: none;
         height: 100px;
       }
     }
 
-    #simple-syrup {
+    #simple-syrup-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
@@ -130,12 +126,14 @@ main {
       width: 150px;
       border: 2px solid black;
       .simple-syrup__img {
+        pointer-events: none;
         height: 100px;
       }
     }
 
-    #creme-de-mure {
+    #creme-de-mure-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
@@ -143,58 +141,64 @@ main {
       width: 150px;
       border: 2px solid black;
       .creme-de-mure__img {
+        pointer-events: none;
         height: 100px;
       }
     }
   }
 
   .bottom-shelf {
-    margin: 10px 0 10px 0;
+    background-color: #1b1b1b;
+    padding: 40px 10px 0 10px;
     height: 20vh;
     width: 90vh;
     border: 2px solid black;
+    border-bottom: 20px solid saddlebrown;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    #vodka {
+    #vodka-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
       border: 2px solid black;
-
       .vodka__img {
+        pointer-events: none;
         height: 100px;
       }
     }
 
-    #gin {
+    #gin-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
       border: 2px solid black;
-
       .gin__img {
+        pointer-events: none;
         height: 100px;
       }
     }
 
-    #cof-liq {
+    #cof-liq-box {
       @extend %flex-center;
+      background-color: white;
       flex-direction: column;
       justify-content: space-evenly;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
       border: 2px solid black;
-
       .cof-liq__img {
+        pointer-events: none;
         height: 100px;
       }
     }
@@ -205,12 +209,14 @@ main {
     height: 20vh;
     width: 90vh;
     border: 2px solid black;
+    background-color: saddlebrown;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     
     #ice {
       @extend %flex-center;
+      background-color: white;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
@@ -219,10 +225,58 @@ main {
     
     #shake {
       @extend %flex-center;
+      background-color: white;
       margin: 10px 10px 0 10px;
       height: 150px;
       width: 150px;
       border: 2px solid black;
     }
   }
+}
+
+.result {
+    @extend %flex-center;
+    border: 2px solid black;
+    font-family: $recipe-font;
+    height: 95vh;
+    width: 100vh; 
+  
+    #outcome {
+      @extend %flex-center;
+      flex-direction: column;
+      height: 60vh;
+      width: 40vh;  
+      border: 10px solid white;
+      background-color: #1b1b1b;
+      color: #eeeeee;
+  
+      h3 {
+        height: 50px;
+      }
+  
+      ul {
+        @extend %flex-center;
+        flex-direction: column;
+        height: 20vh;
+        font-size: 28px;
+        list-style: none;
+  
+        .espresso-martini__img {
+          height: 300px;
+        }
+      }
+    
+      button {
+        margin: 20px;
+        background-color: $button-color;
+        padding: 10px 30px;
+        border-radius: 5px;
+        color: white;
+        border: 2px solid black;
+      }
+    }
+  }
+
+.hide{
+  display: none;
 }
