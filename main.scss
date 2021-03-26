@@ -234,7 +234,7 @@ main {
   }
 }
 
-.result {
+.result-win {
     @extend %flex-center;
     border: 2px solid black;
     font-family: $recipe-font;
@@ -276,6 +276,50 @@ main {
       }
     }
   }
+
+  .result-lose {
+    @extend %flex-center;
+    border: 2px solid black;
+    font-family: $recipe-font;
+    height: 95vh;
+    width: 100vh; 
+  
+    #outcome {
+      @extend %flex-center;
+      flex-direction: column;
+      height: 60vh;
+      width: 40vh;  
+      border: 10px solid white;
+      background-color: #616161;
+      color: #eeeeee;
+  
+      h3 {
+        height: 50px;
+      }
+  
+      ul {
+        @extend %flex-center;
+        flex-direction: column;
+        height: 20vh;
+        font-size: 28px;
+        list-style: none;
+  
+        .cobbler-shaker-fail__img {
+          height: 300px;
+        }
+      }
+    
+      button {
+        margin: 20px;
+        background-color: $button-color;
+        padding: 10px 30px;
+        border-radius: 5px;
+        color: white;
+        border: 2px solid black;
+      }
+    }
+  }
+
 
 .hide{
   display: none;

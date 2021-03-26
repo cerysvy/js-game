@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase&display=swap");
-.result #outcome ul, .result #outcome, .result, .bar .bar-top #shake, .bar .bar-top #ice, .bar .bottom-shelf #cof-liq-box, .bar .bottom-shelf #gin-box, .bar .bottom-shelf #vodka-box, .bar .top-shelf #creme-de-mure-box, .bar .top-shelf #simple-syrup-box, .bar .top-shelf #lemon-juice-box, .bar .top-shelf #espresso-box, .bar, main section ul, main section, main, header {
+.result-lose #outcome ul, .result-lose #outcome, .result-lose, .result-win #outcome ul, .result-win #outcome, .result-win, .bar .bar-top #shake, .bar .bar-top #ice, .bar .bottom-shelf #cof-liq-box, .bar .bottom-shelf #gin-box, .bar .bottom-shelf #vodka-box, .bar .top-shelf #creme-de-mure-box, .bar .top-shelf #simple-syrup-box, .bar .top-shelf #lemon-juice-box, .bar .top-shelf #espresso-box, .bar, main section ul, main section, main, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,13 +198,13 @@ main section button {
   border: 2px solid black;
 }
 
-.result {
+.result-win {
   border: 2px solid black;
   font-family: "Cormorant Unicase";
   height: 95vh;
   width: 100vh;
 }
-.result #outcome {
+.result-win #outcome {
   flex-direction: column;
   height: 60vh;
   width: 40vh;
@@ -212,19 +212,54 @@ main section button {
   background-color: #1b1b1b;
   color: #eeeeee;
 }
-.result #outcome h3 {
+.result-win #outcome h3 {
   height: 50px;
 }
-.result #outcome ul {
+.result-win #outcome ul {
   flex-direction: column;
   height: 20vh;
   font-size: 28px;
   list-style: none;
 }
-.result #outcome ul .espresso-martini__img {
+.result-win #outcome ul .espresso-martini__img {
   height: 300px;
 }
-.result #outcome button {
+.result-win #outcome button {
+  margin: 20px;
+  background-color: green;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid black;
+}
+
+.result-lose {
+  border: 2px solid black;
+  font-family: "Cormorant Unicase";
+  height: 95vh;
+  width: 100vh;
+}
+.result-lose #outcome {
+  flex-direction: column;
+  height: 60vh;
+  width: 40vh;
+  border: 10px solid white;
+  background-color: #616161;
+  color: #eeeeee;
+}
+.result-lose #outcome h3 {
+  height: 50px;
+}
+.result-lose #outcome ul {
+  flex-direction: column;
+  height: 20vh;
+  font-size: 28px;
+  list-style: none;
+}
+.result-lose #outcome ul .cobbler-shaker-fail__img {
+  height: 300px;
+}
+.result-lose #outcome button {
   margin: 20px;
   background-color: green;
   padding: 10px 30px;
